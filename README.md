@@ -20,7 +20,7 @@ This [`zabbix_slack_alert.sh` script](https://github.com/gek0/ZabbixSlackAlerter
 	### Option: AlertScriptsPath
 	AlertScriptsPath=/usr/lib/zabbix/alertscripts
 
-	[root@zabbix ~]# ls -lah /usr/lib/zabbix/alertscriptszabbix_slack_alert.sh
+	[root@zabbix ~]# ls -lah /usr/lib/zabbix/alertscripts/zabbix_slack_alert.sh
 	-rwxr-xr-x 1 root root 1,9K Ruj 21 12:59 /usr/lib/zabbix/alertscripts/zabbix_slack_alert.sh
 
 If you do change `AlertScriptsPath` (or any other values) within `zabbix_server.conf`, a restart of the Zabbix server service is required.
