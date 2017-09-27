@@ -43,7 +43,6 @@ fi
 # the message that we want to send to Slack is the "subject" value ($2 / $subject - that we got earlier) followed by the message that Zabbix actually sent us ($3)
 slack_message="${slack_emoji} ${slack_status} ${message}"
 
-
 curl -m 5 -sX POST \
     --data-urlencode 'payload={"channel": "'${to}'", "username": "'${slack_username}'", "icon_url": "'${slack_avatar}'", "attachments": [{"title": "'"${slack_message}"'", "color": "'${slack_color}'" }]}' \
     "${slack_webhook}" -A 'zabbix-alert-script | gek0 - https://github.com/gek0'
