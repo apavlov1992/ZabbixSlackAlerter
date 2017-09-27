@@ -11,6 +11,12 @@ problem_color='#BB1515'
 declare -a problem_slack_emojis=(':hankey:' ':scream:' ':cry:' ':tired_face:' ':face_with_head_bandage:' ':sob:' ':cold_sweat:' ':fire:' )
 number_of_problem_emojis=${#problem_slack_emojis[@]}
 
+if [[ -z "${slack_webhook}" ]]
+then
+	echo "Slack webhook not defined, exiting."
+	exit 99
+fi
+
 # script parameters
 # to = $1 (Slack channel or user to send the message to, specified in the Zabbix web interface; "@username" or "#channel")
 # subject = $2 (usually either PROBLEM or RECOVERY)
